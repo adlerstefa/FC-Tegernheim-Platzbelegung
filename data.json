@@ -52,6 +52,18 @@
       "trainer": "",
       "kabine": "",
       "notiz": ""
+    },
+    {
+      "id": "bmrfc40hj5cbee",
+      "platzId": "p2",
+      "datum": "2026-07-06",
+      "von": "19:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "",
+      "kabine": "",
+      "notiz": ""
     }
   ]
 }
