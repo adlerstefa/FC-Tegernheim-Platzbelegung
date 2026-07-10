@@ -64,6 +64,18 @@
       "trainer": "",
       "kabine": "",
       "notiz": ""
+    },
+    {
+      "id": "bmrfc4wwanse0f",
+      "platzId": "p1",
+      "datum": "2026-07-06",
+      "von": "22:00",
+      "bis": "23:30",
+      "typ": "Training",
+      "mannschaft": "Damen",
+      "trainer": "",
+      "kabine": "",
+      "notiz": ""
     }
   ]
 }
