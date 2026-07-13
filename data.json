@@ -3,14 +3,48 @@
   "config": {
     "vereinsname": "FC Tegernheim",
     "plaetze": [
-      { "id": "p1", "name": "Platz 1", "verantwortlicher": "" },
-      { "id": "p2", "name": "Platz 2", "verantwortlicher": "" },
-      { "id": "p3", "name": "Platz Am Damm", "verantwortlicher": "" },
-      { "id": "p4", "name": "Kleinfeld", "verantwortlicher": "" }
+      {
+        "id": "p1",
+        "name": "Platz 1",
+        "verantwortlicher": ""
+      },
+      {
+        "id": "p2",
+        "name": "Platz 2",
+        "verantwortlicher": ""
+      },
+      {
+        "id": "p3",
+        "name": "Platz Am Damm",
+        "verantwortlicher": ""
+      },
+      {
+        "id": "p4",
+        "name": "Kleinfeld",
+        "verantwortlicher": ""
+      }
     ],
-    "kabinen": ["Heim 1", "Heim 2", "Gast 1", "Gast 2"],
-    "mannschaften": ["1. Mannschaft", "2. Mannschaft", "Damen", "A-Jugend", "B-Jugend", "AH"],
+    "kabinen": [
+      "Heim 1",
+      "Heim 2",
+      "Gast 1",
+      "Gast 2"
+    ],
+    "mannschaften": [
+      "1. Mannschaft",
+      "2. Mannschaft",
+      "Damen",
+      "A-Jugend",
+      "B-Jugend",
+      "AH"
+    ],
     "trainer": []
   },
-  "buchungen": []
+  "buchungen": [],
+  "zugang": {
+    "salz": "nl2LLL1m5C6f7w4AV6R8cw==",
+    "iv": "wCM1wlEvymm2kfeT",
+    "blob": "TSyQ8dhyNz4coym6cw8Iy1hO4u2fpvHKl0Mj+H3L2suoHfWuC9ZCZQxUt5E0nHzMmUPniqVxgXwaPHt0XESvH/e+M8Jnr4h+tTI27+zJB4cT3Ss16f/SETTZBMPS3ApCfyY3YneeIep8ogzMIg==",
+    "iterationen": 310000
+  }
 }
