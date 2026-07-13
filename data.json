@@ -38,9 +38,24 @@
       "B-Jugend",
       "AH"
     ],
-    "trainer": []
+    "trainer": [
+      "A. Lengsfeld"
+    ]
   },
-  "buchungen": [],
+  "buchungen": [
+    {
+      "id": "bmrjjvaq4igiz1",
+      "platzId": "p1",
+      "datum": "2026-07-13",
+      "von": "18:00",
+      "bis": "19:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "",
+      "notiz": ""
+    }
+  ],
   "zugang": {
     "salz": "nl2LLL1m5C6f7w4AV6R8cw==",
     "iv": "wCM1wlEvymm2kfeT",
