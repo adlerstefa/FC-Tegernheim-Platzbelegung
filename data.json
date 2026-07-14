@@ -40,7 +40,8 @@
     "trainer": [
       "A. Lengsfeld",
       "T. Polster",
-      "Guti/ Schweiger"
+      "Guti/ Schweiger",
+      "Rößler Volker/Elferturnier CSU"
     ]
   },
   "buchungen": [
@@ -595,6 +596,18 @@
       "trainer": "Guti/ Schweiger",
       "kabine": "Gast 1",
       "notiz": ""
+    },
+    {
+      "id": "bmrkk1s0bt8ju0",
+      "platzId": "p4",
+      "datum": "2026-07-25",
+      "von": "08:00",
+      "bis": "12:30",
+      "typ": "Spiel",
+      "mannschaft": "Alte Liga",
+      "trainer": "Rößler Volker/Elferturnier CSU",
+      "kabine": "",
+      "notiz": "CSU Elferturnier"
     }
   ],
   "zugang": {
