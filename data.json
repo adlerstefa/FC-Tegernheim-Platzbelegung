@@ -609,18 +609,6 @@
       "trainer": "Rößler Volker/Elferturnier CSU",
       "kabine": "",
       "notiz": "CSU Elferturnier"
-    },
-    {
-      "id": "bmrkk2x3s5vt28",
-      "platzId": "p1",
-      "datum": "2026-07-15",
-      "von": "18:00",
-      "bis": "19:30",
-      "typ": "Training",
-      "mannschaft": "2. Mannschaft",
-      "trainer": "Mirter",
-      "kabine": "",
-      "notiz": ""
     }
   ],
   "zugang": {
