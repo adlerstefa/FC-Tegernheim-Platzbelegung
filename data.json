@@ -78,6 +78,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "ASV Burglengenfeld"
+    },
+    {
+      "id": "bmrk6g0laq7ksj",
+      "platzId": "p1",
+      "datum": "2026-08-05",
+      "von": "17:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "TSV Kareth-Lappersdorf"
     }
   ],
   "zugang": {
