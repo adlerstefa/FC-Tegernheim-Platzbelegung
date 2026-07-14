@@ -212,18 +212,6 @@
       "notiz": "SV Wenzenbach"
     },
     {
-      "id": "bmrk72zfgufoc2",
-      "platzId": "p1",
-      "datum": "2027-03-27",
-      "von": "15:30",
-      "bis": "19:00",
-      "typ": "Spiel",
-      "mannschaft": "1. Mannschaft",
-      "trainer": "A. Lengsfeld",
-      "kabine": "Heim 1",
-      "notiz": "SC Luhe-Wildenau"
-    },
-    {
       "id": "bmrk74p3v7tcmr",
       "platzId": "p1",
       "datum": "2027-04-10",
@@ -366,6 +354,18 @@
       "trainer": "T. Polster",
       "kabine": "Heim 2",
       "notiz": "SV Zeitlarn"
+    },
+    {
+      "id": "bmrk72zfgufoc2",
+      "platzId": "p1",
+      "datum": "2027-03-27",
+      "von": "17:00",
+      "bis": "19:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "SC Luhe-Wildenau"
     }
   ],
   "zugang": {
