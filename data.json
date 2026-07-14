@@ -126,6 +126,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "FC Amberg"
+    },
+    {
+      "id": "bmrk6noq7mz4bi",
+      "platzId": "p1",
+      "datum": "2026-09-19",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "DJK Vornbach"
     }
   ],
   "zugang": {
