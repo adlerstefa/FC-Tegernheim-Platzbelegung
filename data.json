@@ -366,6 +366,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SC Luhe-Wildenau"
+    },
+    {
+      "id": "bmrk7u0jhqukx9",
+      "platzId": "p1",
+      "datum": "2027-03-27",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Training",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "T. Polster",
+      "kabine": "Heim 2",
+      "notiz": "VfR Regensburg"
     }
   ],
   "zugang": {
