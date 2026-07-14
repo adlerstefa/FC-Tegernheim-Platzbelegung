@@ -66,6 +66,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": ""
+    },
+    {
+      "id": "bmrk6e2vy8zqs3",
+      "platzId": "p1",
+      "datum": "2026-07-24",
+      "von": "17:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "ASV Burglengenfeld"
     }
   ],
   "zugang": {
