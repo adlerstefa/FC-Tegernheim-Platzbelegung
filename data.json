@@ -246,6 +246,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SV Schwandorf-Ettmannsdorf"
+    },
+    {
+      "id": "bmrk777ptauru3",
+      "platzId": "p1",
+      "datum": "2027-05-08",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "SV Grainet"
     }
   ],
   "zugang": {
