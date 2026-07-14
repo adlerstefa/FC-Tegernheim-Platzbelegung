@@ -570,6 +570,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": ""
+    },
+    {
+      "id": "bmrk90i97adi41",
+      "platzId": "p1",
+      "datum": "2026-08-27",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": ""
     }
   ],
   "zugang": {
