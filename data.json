@@ -186,6 +186,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "TSV 1883 Bogen"
+    },
+    {
+      "id": "bmrk700x4jr0iq",
+      "platzId": "p1",
+      "datum": "2026-11-28",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "1. FC 1911 Passau"
     }
   ],
   "zugang": {
