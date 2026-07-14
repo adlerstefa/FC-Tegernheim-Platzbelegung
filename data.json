@@ -198,6 +198,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "1. FC 1911 Passau"
+    },
+    {
+      "id": "bmrk71btq1sfyz",
+      "platzId": "p1",
+      "datum": "2027-03-13",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "SV Wenzenbach"
     }
   ],
   "zugang": {
