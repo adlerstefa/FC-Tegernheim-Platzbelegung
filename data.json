@@ -138,6 +138,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "DJK Vornbach"
+    },
+    {
+      "id": "bmrk6oype05v8w",
+      "platzId": "p1",
+      "datum": "2026-10-03",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "1. FC Bad Kötzting"
     }
   ],
   "zugang": {
