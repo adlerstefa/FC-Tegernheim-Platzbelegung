@@ -414,6 +414,18 @@
       "trainer": "T. Polster",
       "kabine": "Heim 2",
       "notiz": "SC Lorenzen"
+    },
+    {
+      "id": "bmrk80pvyvzrc6",
+      "platzId": "p1",
+      "datum": "2027-05-23",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "T. Polster",
+      "kabine": "Heim 2",
+      "notiz": "SC Regensburg II"
     }
   ],
   "zugang": {
