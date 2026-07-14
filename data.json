@@ -402,6 +402,18 @@
       "trainer": "T. Polster",
       "kabine": "Heim 2",
       "notiz": "SpVgg Stadtamhof Rgbg"
+    },
+    {
+      "id": "bmrk7zghwgzeft",
+      "platzId": "p1",
+      "datum": "2027-05-05",
+      "von": "17:30",
+      "bis": "19:30",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "T. Polster",
+      "kabine": "Heim 2",
+      "notiz": "SC Lorenzen"
     }
   ],
   "zugang": {
