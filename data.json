@@ -294,6 +294,18 @@
       "trainer": "T. Polster",
       "kabine": "Heim 2",
       "notiz": "SV Fortuna Regensburg II"
+    },
+    {
+      "id": "bmrk7fy60oda7y",
+      "platzId": "p1",
+      "datum": "2026-08-16",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "T. Polster",
+      "kabine": "Heim 2",
+      "notiz": "ATSV Pirkensee-Ponholz"
     }
   ],
   "zugang": {
