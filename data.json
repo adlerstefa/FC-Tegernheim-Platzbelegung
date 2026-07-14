@@ -39,7 +39,8 @@
     ],
     "trainer": [
       "A. Lengsfeld",
-      "T. Polster"
+      "T. Polster",
+      "Guti/ Schweiger"
     ]
   },
   "buchungen": [
@@ -581,6 +582,18 @@
       "mannschaft": "1. Mannschaft",
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrkjruio9ugz1",
+      "platzId": "p1",
+      "datum": "2026-07-16",
+      "von": "17:00",
+      "bis": "19:00",
+      "typ": "Training",
+      "mannschaft": "B-Jugend",
+      "trainer": "Guti/ Schweiger",
+      "kabine": "Gast 1",
       "notiz": ""
     }
   ],
