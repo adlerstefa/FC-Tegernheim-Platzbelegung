@@ -210,6 +210,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SV Wenzenbach"
+    },
+    {
+      "id": "bmrk72zfgufoc2",
+      "platzId": "p1",
+      "datum": "2027-03-27",
+      "von": "15:30",
+      "bis": "19:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "SC Luhe-Wildenau"
     }
   ],
   "zugang": {
