@@ -284,18 +284,6 @@
       "notiz": "SV Wenzenbach II"
     },
     {
-      "id": "bmrk7j3fwl8iec",
-      "platzId": "p1",
-      "datum": "2026-09-13",
-      "von": "13:30",
-      "bis": "17:00",
-      "typ": "Training",
-      "mannschaft": "2. Mannschaft",
-      "trainer": "T. Polster",
-      "kabine": "Heim 2",
-      "notiz": "Regensburger Turnerschaft"
-    },
-    {
       "id": "bmrk7c0fl27rbg",
       "platzId": "p1",
       "datum": "2026-07-19",
@@ -330,6 +318,18 @@
       "trainer": "T. Polster",
       "kabine": "Heim 2",
       "notiz": "ATSV Pirkensee-Ponholz"
+    },
+    {
+      "id": "bmrk7j3fwl8iec",
+      "platzId": "p1",
+      "datum": "2026-09-13",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "trainer": "T. Polster",
+      "kabine": "Heim 2",
+      "notiz": "Regensburger Turnerschaft"
     }
   ],
   "zugang": {
