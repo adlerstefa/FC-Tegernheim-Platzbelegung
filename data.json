@@ -582,6 +582,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": ""
+    },
+    {
+      "id": "bmrkjq7795mjc6",
+      "platzId": "p1",
+      "datum": "2026-07-14",
+      "von": "12:00",
+      "bis": "13:00",
+      "typ": "Training",
+      "mannschaft": "Alte Liga",
+      "trainer": "",
+      "kabine": "",
+      "notiz": "Test"
     }
   ],
   "zugang": {
