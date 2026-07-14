@@ -258,6 +258,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SV Grainet"
+    },
+    {
+      "id": "bmrk787zlr9wq5",
+      "platzId": "p1",
+      "datum": "2027-05-15",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "FC Dingolfing"
     }
   ],
   "zugang": {
