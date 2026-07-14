@@ -114,6 +114,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SpVgg Lam"
+    },
+    {
+      "id": "bmrk6lyjhxzwyq",
+      "platzId": "p1",
+      "datum": "2026-09-05",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "FC Amberg"
     }
   ],
   "zugang": {
