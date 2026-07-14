@@ -234,6 +234,18 @@
       "trainer": "A. Lengsfeld",
       "kabine": "Heim 1",
       "notiz": "SV Türk Gücü Straubing"
+    },
+    {
+      "id": "bmrk760yw2hi76",
+      "platzId": "p1",
+      "datum": "2027-04-24",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "trainer": "A. Lengsfeld",
+      "kabine": "Heim 1",
+      "notiz": "SV Schwandorf-Ettmannsdorf"
     }
   ],
   "zugang": {
