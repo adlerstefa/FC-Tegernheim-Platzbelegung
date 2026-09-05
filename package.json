@@ -1,0 +1,8 @@
+{
+  "name": "fct-platzbelegung",
+  "private": true,
+  "description": "Platzbelegung FC Tegernheim – statische Web-App ohne Build-Schritt. Tests: npm test",
+  "scripts": {
+    "test": "node --check app.js && node --check logik.js && node --test"
+  }
+}

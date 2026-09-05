@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FC Tegernheim · Platzbelegung</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="icon" href="logo.png">
+<script src="qrcode.min.js"></script>
+<script src="nacl-fast.min.js"></script>
+<style>
+  :root{
+    --rot:#e10707; --rot-dunkel:#780404; --rot-hell:#fdeaea;
+    --schwarz:#1a1d21; --grau:#5b6570; --grau-hell:#eef0f2; --linie:#dde1e5;
+    --weiss:#fff; --gruen:#2e9e4f; --orange:#f0a020; --orange-dunkel:#8a5a00; --orange-hell:#fff4dc;
+    --radius:12px;
+    --schatten:0 1px 3px rgba(0,0,0,.10),0 4px 14px rgba(0,0,0,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:#f7f8f9;color:var(--schwarz);font-size:15px;line-height:1.45;padding-bottom:90px}
+
+  /* ---------- Kopf ---------- */
+  header{background:linear-gradient(135deg,var(--rot) 0%,var(--rot-dunkel) 100%);color:#fff;
+    padding:calc(env(safe-area-inset-top) + 14px) 16px 12px;box-shadow:var(--schatten);
+    position:sticky;top:0;z-index:40}
+  .kopfzeile{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto}
+  .kopfzeile img{width:46px;height:51px;background:#fff;border-radius:8px;padding:2px}
+  .kopfzeile h1{font-size:18px;font-weight:800;letter-spacing:.2px}
+  .kopfzeile .sub{font-size:12px;opacity:.85;font-weight:500}
+  .modus{margin-left:auto;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);white-space:nowrap}
+  .modus.edit{background:#fff;color:var(--rot-dunkel)}
+  .modus.leitung{background:#ffd54f;color:#5a3d00;border-color:#ffd54f}
+
+  nav{display:flex;gap:6px;max-width:1100px;margin:12px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  nav button{flex:0 0 auto;border:0;background:rgba(255,255,255,.14);color:#fff;font-weight:600;
+    font-size:13px;padding:8px 14px;border-radius:99px;cursor:pointer}
+  nav button.aktiv{background:#fff;color:var(--rot-dunkel)}
+
+  main{max-width:1100px;margin:16px auto;padding:0 12px}
+
+  /* ---------- Wochen-Navigation ---------- */
+  .wochennav{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .wochennav h2{font-size:16px;font-weight:800;flex:1;text-align:center}
+  .pfeil,.heute-btn{border:1px solid var(--linie);background:#fff;border-radius:10px;cursor:pointer;
+    font-size:15px;font-weight:700;color:var(--schwarz);padding:7px 12px;box-shadow:var(--schatten)}
+  .heute-btn{font-size:13px;color:var(--rot)}
+
+  /* ---------- Ampel-Legende ---------- */
+  .ampel{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--grau);font-weight:600;margin:-6px 2px 12px}
+  .ampel span::before{content:'';display:inline-block;width:9px;height:9px;border-radius:99px;margin-right:5px;vertical-align:middle}
+  .ampel .a-gruen::before{background:var(--gruen)}
+  .ampel .a-orange::before{background:var(--orange)}
+  .ampel .a-rot::before{background:var(--rot)}
+  .ampel .a-grau::before{background:#b6bdc4}
+
+  /* ---------- Wochenplan ---------- */
+  .plan{display:grid;gap:10px}
+  .tag-block{background:#fff;border-radius:var(--radius);box-shadow:var(--schatten);overflow:hidden}
+  .tag-block.heute{outline:2px solid var(--rot)}
+  .tag-kopf{display:flex;align-items:baseline;gap:8px;padding:9px 14px;background:var(--schwarz);color:#fff}
+  .tag-kopf .tagname{font-weight:800;font-size:14px}
+  .tag-kopf .tagdatum{font-size:12px;opacity:.75}
+  .tag-kopf .heute-tag{margin-left:auto;font-size:10px;font-weight:800;background:var(--rot);
+    padding:2px 8px;border-radius:99px;letter-spacing:.5px}
+  .platz-zeilen{display:grid}
+  @media(min-width:760px){.platz-zeilen{grid-template-columns:repeat(4,1fr)}}
+  .platz-zelle{padding:8px 10px;border-top:1px solid var(--grau-hell);min-height:44px}
+  @media(min-width:760px){.platz-zelle{border-left:1px solid var(--grau-hell);border-top:0;min-height:70px}}
+  .platz-zelle .platzname{font-size:11px;font-weight:700;color:var(--grau);text-transform:uppercase;
+    letter-spacing:.4px;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+  .platz-icon{width:26px;height:17px;border-radius:3px;flex:0 0 auto;display:block;
+    box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .kabine-tag{display:inline-flex;align-items:center;gap:4px;background:var(--schwarz);color:#fff;
+    border-radius:99px;padding:2px 9px;font-size:10.5px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+  .kabine-tag svg{flex:0 0 auto}
+  .kabine-zeile{display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}
+  .kabine-zeile .tuer-gross{width:24px;height:36px;flex:0 0 auto;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+  .kabine-box{background:#fff;border:1.5px solid var(--linie);border-radius:10px;padding:4px 14px;
+    font-size:16px;font-weight:800;color:var(--schwarz);line-height:1.3}
+  .kab-pills{display:flex;gap:4px;flex-wrap:wrap}
+  .platz-zelle .platzname .plus{margin-left:auto;border:0;background:var(--grau-hell);color:var(--grau);
+    width:20px;height:20px;border-radius:6px;font-size:14px;line-height:1;cursor:pointer;font-weight:700}
+  .platz-zelle .platzname .plus:hover{background:var(--rot);color:#fff}
+  .sperre-banner{background:var(--rot-hell);border:1px solid #f5c6c6;color:var(--rot-dunkel);border-radius:8px;
+    padding:4px 8px;font-size:11.5px;font-weight:700;margin-bottom:5px}
+
+  .buchung{border-radius:9px;padding:6px 9px;margin-bottom:5px;cursor:pointer;border:1px solid transparent;
+    background:var(--rot-hell);border-color:#f5c6c6}
+  .buchung.training{background:var(--grau-hell);border-color:var(--linie)}
+  .buchung .zeile1{display:flex;gap:6px;align-items:center;font-size:12.5px;font-weight:800}
+  .buchung .zeit{font-variant-numeric:tabular-nums;color:var(--rot-dunkel)}
+  .buchung.training .zeit{color:var(--schwarz)}
+  .buchung .typ{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:.5px;padding:1px 7px;
+    border-radius:99px;background:var(--rot);color:#fff}
+  .buchung.training .typ{background:var(--grau)}
+  .buchung .zeile2{font-size:12px;color:var(--schwarz);margin-top:1px}
+  .buchung .zeile3{font-size:11px;color:var(--grau);margin-top:1px;display:flex;gap:8px;flex-wrap:wrap}
+  .buchung .ampel-punkt{width:9px;height:9px;border-radius:99px;flex:0 0 auto;background:var(--gruen)}
+  .buchung.angefragt{background:var(--orange-hell);border-color:#f3c96b}
+  .buchung.angefragt .zeit{color:var(--orange-dunkel)}
+  .buchung.angefragt .ampel-punkt{background:var(--orange)}
+  .buchung.abgelehnt{opacity:.6;background:#f2f2f2;border-color:#ddd}
+  .buchung.abgelehnt .zeile2{text-decoration:line-through}
+  .buchung.abgelehnt .ampel-punkt{background:#b6bdc4}
+  .buchung.in-sperre{border-color:var(--rot);box-shadow:inset 0 0 0 1px var(--rot)}
+  .buchung.in-sperre .ampel-punkt{background:var(--rot)}
+  .buchung .serie-symbol{font-size:12px;color:var(--grau);font-weight:800}
+  .status-zeile{font-size:10.5px;font-weight:800;margin-top:4px;letter-spacing:.3px}
+  .status-zeile.angefragt{color:var(--orange-dunkel)}
+  .status-zeile.abgelehnt{color:var(--grau)}
+  .status-zeile.sperre{color:var(--rot)}
+  .status-zeile.genehmigt{color:var(--gruen)}
+  .leer{font-size:12px;color:#b6bdc4;font-style:italic}
+
+  /* ---------- Anlage (grafische Übersicht) ---------- */
+  .anlage-raster{display:grid;gap:14px}
+  @media(min-width:820px){.anlage-raster{grid-template-columns:1fr 1fr}}
+  .platz-karte{background:#fff;border-radius:var(--radius);box-shadow:var(--schatten);overflow:hidden;
+    display:flex;flex-direction:column}
+  .platz-karte.aktiv-jetzt{outline:3px solid var(--rot)}
+  .platz-kopf{display:flex;align-items:center;gap:8px;padding:10px 14px}
+  .platz-kopf .pk-name{font-weight:800;font-size:15px}
+  .platz-kopf .pk-verantw{font-size:12px;color:var(--grau)}
+  .platz-kopf .pk-status{margin-left:auto;font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;
+    background:#e7f5eb;color:var(--gruen);white-space:nowrap}
+  .platz-kopf .pk-status.belegt{background:var(--rot);color:#fff}
+  .platz-kopf .pk-status.gesperrt{background:var(--rot);color:#fff}
+  .platz-kopf .plus{border:0;background:var(--grau-hell);color:var(--grau);width:26px;height:26px;
+    border-radius:8px;font-size:17px;line-height:1;cursor:pointer;font-weight:700;flex:0 0 auto}
+  .platz-kopf .plus:hover{background:var(--rot);color:#fff}
+  .pitch-wrap{position:relative;flex:1;background:#2f8f46;display:flex;flex-direction:column;justify-content:center}
+  .pitch-wrap svg.rasen{display:block;width:100%;height:auto}
+  .platz-karte.gesperrt .pitch-wrap{background:#5c1f1f}
+  .platz-karte.gesperrt svg.rasen{filter:grayscale(.7) brightness(.55)}
+  .pitch-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:5px;padding:14px;overflow:hidden}
+  .pitch-overlay .buchung{background:rgba(255,255,255,.94);width:100%;max-width:250px;margin:0;
+    box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  .pitch-overlay .frei-schild{background:rgba(255,255,255,.55);color:#14532d;font-weight:800;font-size:13px;
+    padding:5px 16px;border-radius:99px;letter-spacing:.5px}
+  .pitch-overlay .mehr{background:rgba(26,29,33,.75);color:#fff;font-size:11px;font-weight:700;
+    padding:3px 10px;border-radius:99px;cursor:pointer}
+  .sperr-schild{background:var(--rot);color:#fff;font-weight:800;font-size:13px;padding:6px 14px;border-radius:10px;
+    text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.35);max-width:250px;width:100%;letter-spacing:.4px}
+  .sperr-schild small{display:block;font-weight:600;font-size:11px;opacity:.92;letter-spacing:0}
+
+  .kabinen-trakt{background:linear-gradient(180deg,#2b2f34,#1a1d21);border-radius:var(--radius);
+    box-shadow:var(--schatten);padding:14px;margin-top:14px}
+  .kabinen-trakt .kt-titel{color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .kabinen-trakt .kt-titel .dach{flex:1;border-top:2px solid rgba(255,255,255,.25)}
+  .kabinen-reihe{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  @media(min-width:640px){.kabinen-reihe{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}}
+  .kabine{background:#fff;border-radius:10px;padding:10px;text-align:center}
+  .kabine svg{width:44px;height:66px;display:block;margin:0 auto 6px}
+  .kabine .kb-name{font-weight:800;font-size:13px}
+  .kabine .kb-info{font-size:11px;color:var(--grau);margin-top:3px;line-height:1.5}
+  .kabine .kb-info .kb-belegung{display:block}
+  .kabine .kb-info b{color:var(--schwarz)}
+  .kabine.jetzt{outline:2px solid var(--rot)}
+  .kabine.gesperrt{outline:2px solid var(--rot);background:#fff5f5}
+  .kabine .kb-sperre{color:var(--rot);font-weight:800;display:block}
+
+  /* ---------- Liste ---------- */
+  .liste-datum{font-size:13px;font-weight:800;color:var(--grau);margin:18px 2px 8px;text-transform:uppercase;letter-spacing:.5px}
+  .liste-karte{background:#fff;border-radius:var(--radius);box-shadow:var(--schatten);padding:10px 14px;margin-bottom:8px;
+    display:flex;gap:12px;align-items:center;cursor:pointer;border-left:4px solid var(--rot)}
+  .liste-karte.training{border-left-color:var(--grau)}
+  .liste-karte.angefragt{border-left-color:var(--orange);background:#fffaf0}
+  .liste-karte.abgelehnt{opacity:.6}
+  .liste-karte.sperre{border-left-color:var(--rot);background:#fff5f5;cursor:default}
+  .liste-karte .lz{font-weight:800;font-variant-numeric:tabular-nums;font-size:13px;min-width:86px}
+  .liste-karte .lm{flex:1}
+  .liste-karte .lm b{font-size:14px}
+  .liste-karte .lm .klein{font-size:12px;color:var(--grau)}
+
+  /* ---------- Karten / Stammdaten ---------- */
+  .karte{background:#fff;border-radius:var(--radius);box-shadow:var(--schatten);padding:16px;margin-bottom:14px}
+  .karte h3{font-size:15px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .karte h3 .punkt{width:9px;height:9px;border-radius:99px;background:var(--rot);display:inline-block}
+  .karte .hinweis{font-size:12.5px;color:var(--grau);margin-bottom:12px}
+  .sd-zeile{display:flex;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--grau-hell)}
+  .sd-zeile input{flex:1;min-width:0}
+  .sd-zeile .loeschen{border:0;background:none;color:var(--grau);cursor:pointer;font-size:16px;padding:4px 6px}
+  .sd-zeile .loeschen:hover{color:var(--rot)}
+  .hinzu{margin-top:10px;display:flex;gap:8px}
+  .hinzu input{flex:1}
+
+  input,select,textarea{font:inherit;border:1px solid var(--linie);border-radius:9px;padding:8px 10px;
+    background:#fff;color:var(--schwarz);width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--rot);outline-offset:-1px;border-color:var(--rot)}
+  input:disabled{background:var(--grau-hell);color:var(--grau)}
+  label{font-size:12px;font-weight:700;color:var(--grau);display:block;margin:12px 0 4px;text-transform:uppercase;letter-spacing:.4px}
+
+  .btn{border:0;border-radius:10px;padding:10px 18px;font-weight:800;font-size:14px;cursor:pointer;
+    background:var(--rot);color:#fff}
+  .btn:hover{background:var(--rot-dunkel)}
+  .btn.zweit{background:var(--grau-hell);color:var(--schwarz)}
+  .btn.zweit:hover{background:#dfe3e7}
+  .btn.gefahr{background:#fff;color:var(--rot);border:1px solid var(--rot)}
+  .btn.gefahr:hover{background:var(--rot-hell)}
+  .btn.gruen{background:var(--gruen)}
+  .btn.gruen:hover{background:#237a3c}
+  .btn.klein{padding:7px 12px;font-size:12.5px}
+  .btn:disabled{opacity:.5;cursor:default}
+
+  /* ---------- Segment-Schalter ---------- */
+  .segment{display:flex;background:var(--grau-hell);border-radius:10px;padding:3px;gap:3px}
+  .segment button{flex:1;border:0;background:none;padding:8px;border-radius:8px;font-weight:800;
+    font-size:13.5px;cursor:pointer;color:var(--grau)}
+  .segment button.aktiv{background:var(--rot);color:#fff}
+  .segment button.aktiv.training{background:var(--schwarz)}
+  .segment button.aktiv.gruen{background:var(--gruen)}
+  .segment button.aktiv.orange{background:var(--orange);color:#3a2600}
+  .segment button.aktiv.grau{background:var(--grau)}
+
+  /* ---------- Formular-Bausteine ---------- */
+  .checks{display:flex;flex-wrap:wrap;gap:6px}
+  label.check{display:inline-flex;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:13.5px;
+    font-weight:600;color:var(--schwarz);margin:0;border:1px solid var(--linie);border-radius:99px;padding:6px 12px;
+    cursor:pointer;background:#fff;user-select:none}
+  label.check input{width:auto;margin:0}
+  label.check.an{background:var(--schwarz);color:#fff;border-color:var(--schwarz)}
+  .wtage{display:flex;gap:5px}
+  .wtage button{flex:1;border:1px solid var(--linie);background:#fff;border-radius:8px;padding:7px 0;font-weight:800;
+    font-size:12.5px;cursor:pointer;color:var(--grau)}
+  .wtage button.an{background:var(--rot);color:#fff;border-color:var(--rot)}
+  .block{border:1px solid var(--linie);border-radius:10px;padding:10px 12px;margin-top:14px;background:#fafbfc}
+  .block label.kopf{text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--schwarz);margin:0;
+    display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:800}
+  .block label.kopf input{width:auto}
+  .block .kopf-text{font-weight:800;font-size:13.5px}
+  .radio-zeile{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+  .radio-zeile label{display:inline-flex;align-items:center;gap:5px;text-transform:none;letter-spacing:0;margin:0;
+    font-size:13px;color:var(--schwarz);font-weight:600;cursor:pointer}
+  .radio-zeile input{width:auto}
+  .status-info{margin:8px 0 2px}
+  .serie-info{font-size:12.5px;color:var(--grau);font-weight:600;margin-top:4px}
+  .info{background:#eef4ff;border:1px solid #c9d8f5;color:#1d3f7a;border-radius:10px;padding:9px 12px;font-size:13px;margin-top:12px}
+
+  /* ---------- Anfragen / Sperren-Zeilen ---------- */
+  .anfrage-karte{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--grau-hell)}
+  .anfrage-karte .ak-text{flex:1;font-size:13.5px;min-width:0}
+  .anfrage-karte .ak-text b{font-size:14.5px}
+  .anfrage-karte .ak-klein{font-size:12px;color:var(--grau);margin-top:2px}
+  .anfrage-karte .ak-knoepfe{display:flex;flex-direction:column;gap:6px;flex:0 0 auto}
+  .anfrage-karte .ak-knoepfe .btn{white-space:nowrap}
+  .secret-status{font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+  .secret-status span{background:var(--grau-hell);border-radius:99px;padding:3px 10px;font-weight:700;color:var(--grau)}
+  .secret-status span.ok{background:#e7f5eb;color:var(--gruen)}
+  .secret-status .fehler{background:var(--rot-hell);color:var(--rot-dunkel);border-radius:8px;padding:6px 10px;font-weight:600}
+
+  /* ---------- Modal ---------- */
+  .modal-hg{position:fixed;inset:0;background:rgba(20,22,25,.5);z-index:60;display:flex;
+    align-items:flex-end;justify-content:center}
+  @media(min-width:600px){.modal-hg{align-items:center}}
+  .modal{background:#fff;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;
+    border-radius:18px 18px 0 0;padding:20px 18px calc(env(safe-area-inset-bottom) + 20px)}
+  @media(min-width:600px){.modal{border-radius:18px}}
+  .modal h2{font-size:17px;font-weight:800;margin-bottom:2px}
+  .modal .m-fuss{display:flex;gap:10px;margin-top:20px}
+  .modal .m-fuss .btn{flex:1}
+  .zeit-reihe{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+  .warnung{background:#fff7e6;border:1px solid #f2d492;color:#8a6100;border-radius:10px;
+    padding:9px 12px;font-size:13px;margin-top:12px}
+  .warnung.hart{background:var(--rot-hell);border-color:#f5c6c6;color:var(--rot-dunkel)}
+
+  /* ---------- FAB ---------- */
+  .fab{position:fixed;right:18px;bottom:calc(env(safe-area-inset-bottom) + 18px);z-index:50;
+    width:58px;height:58px;border-radius:99px;border:0;background:var(--rot);color:#fff;font-size:30px;
+    font-weight:400;cursor:pointer;box-shadow:0 6px 20px rgba(225,7,7,.45);line-height:1}
+  .fab:hover{background:var(--rot-dunkel)}
+
+  /* ---------- QR-Seite ---------- */
+  .qr-raster{display:grid;gap:14px}
+  @media(min-width:700px){.qr-raster{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.qr-raster.qr-drei{grid-template-columns:1fr 1fr 1fr}}
+  .qr-karte{text-align:center}
+  .qr-karte .qr-box{display:flex;justify-content:center;margin:14px 0}
+  .qr-karte svg{width:210px;height:210px}
+  .qr-karte .qr-titel{font-size:15px;font-weight:800}
+  .qr-karte .qr-unter{font-size:12.5px;color:var(--grau);margin-top:2px}
+  .qr-karte .url{font-size:11px;color:var(--grau);word-break:break-all;margin-top:8px;
+    background:var(--grau-hell);border-radius:8px;padding:6px 8px}
+  .qr-karte .qr-warn{font-size:11.5px;color:var(--rot-dunkel);font-weight:700;margin-top:8px}
+  .intern-band{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;color:#fff;
+    background:var(--rot);border-radius:99px;padding:2px 10px;margin-bottom:6px}
+  .extern-band{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;color:#fff;
+    background:var(--schwarz);border-radius:99px;padding:2px 10px;margin-bottom:6px}
+
+  .banner{max-width:1100px;margin:10px auto 0;padding:0 12px}
+  .banner>div{border-radius:10px;padding:9px 13px;font-size:13px;font-weight:600}
+  .banner .offline{background:#fff7e6;border:1px solid #f2d492;color:#8a6100}
+  .banner .fehler{background:var(--rot-hell);border:1px solid #f5c6c6;color:var(--rot-dunkel)}
+
+  .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 88px);
+    background:var(--schwarz);color:#fff;font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:99px;
+    z-index:80;box-shadow:var(--schatten);white-space:nowrap;max-width:94vw;overflow:hidden;text-overflow:ellipsis}
+
+  /* ---------- Fußzeile & Rechtliches ---------- */
+  .fuss{max-width:1100px;margin:28px auto 0;padding:14px 16px;border-top:1px solid var(--linie);display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:12.5px;color:var(--grau)}
+  .fuss span{margin-right:auto}
+  .fuss button.link,.fuss a{background:none;border:0;padding:0;font:inherit;color:var(--grau);text-decoration:underline;cursor:pointer}
+  .recht{max-width:760px;margin:0 auto}
+  .recht .karte{padding-bottom:6px}
+  .recht h4{font-size:14.5px;margin:16px 0 6px}
+  .recht p,.recht li{font-size:14px;margin:0 0 8px}
+  .recht ul{padding-left:20px;margin:0 0 10px}
+  .recht a{color:var(--rot-dunkel)}
+  .recht table{border-collapse:collapse;width:100%;font-size:13.5px;margin:0 0 12px}
+  .recht td{border-top:1px solid var(--linie);padding:6px 10px 6px 0;vertical-align:top}
+  .recht td:first-child{font-weight:600;white-space:nowrap;width:1%}
+  .recht .stand{font-size:12.5px;color:var(--grau);margin-top:14px}
+
+  /* ---------- Druck ---------- */
+  @media print{
+    body{background:#fff;padding:0}
+    header,.fab,nav,.wochennav,.kein-druck,.banner,.fuss{display:none!important}
+    .nur-druck{display:block!important}
+    .karte{box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+    .qr-raster{display:block}
+    .qr-karte.druck-aus{display:none!important}
+    .qr-karte svg{width:320px;height:320px}
+  }
+  .nur-druck{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kopfzeile">
+    <img src="logo.png" alt="FC Tegernheim Wappen">
+    <div>
+      <h1>FC Tegernheim</h1>
+      <div class="sub">Platzbelegung &amp; Kabinenplan</div>
+    </div>
+    <span class="modus" id="modusBadge">Ansicht</span>
+  </div>
+  <nav id="hauptNav"></nav>
+</header>
+
+<div class="banner" id="banner"></div>
+<main id="app"></main>
+<button class="fab" id="fab" title="Neue Buchung" style="display:none">+</button>
+
+<footer class="fuss">
+  <span>Fußball-Club Tegernheim e.V. · Abteilung Fußball · Platzbelegung</span>
+  <button type="button" class="link" data-fn="wechsle" data-args='["impressum"]'>Impressum</button>
+  <button type="button" class="link" data-fn="wechsle" data-args='["datenschutz"]'>Datenschutz</button>
+  <a href="https://www.fc-tegernheim.de/" target="_blank" rel="noopener">fc-tegernheim.de</a>
+</footer>
+
+<script src="logik.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
