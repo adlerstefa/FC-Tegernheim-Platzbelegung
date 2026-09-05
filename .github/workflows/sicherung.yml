@@ -1,0 +1,44 @@
+name: Sicherung
+
+# Schickt die Datendatei einmal im Monat (und auf Knopfdruck aus der App) als Anhang an die Abteilungsleitung
+# und legt sie zusätzlich 90 Tage als Artefakt unter GitHub → Actions ab.
+# Postfach und Kontaktschlüssel kommen aus denselben Secrets wie die Benachrichtigung; optional SICHERUNG_AN (weitere Adressen).
+on:
+  schedule:
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sicherung:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten
+        run: pip install --quiet cryptography
+
+      - name: Datendatei per E-Mail sichern
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_VON: ${{ secrets.MAIL_VON }}
+          KONTAKT_SCHLUESSEL: ${{ secrets.KONTAKT_SCHLUESSEL }}
+          SICHERUNG_AN: ${{ secrets.SICHERUNG_AN }}
+        run: python .github/scripts/sicherung.py
+
+      - name: Datendatei als Artefakt ablegen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sicherung-${{ github.run_id }}
+          path: data.json
+          retention-days: 90

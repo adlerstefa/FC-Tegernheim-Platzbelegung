@@ -1,0 +1,36 @@
+name: Tests
+
+# Prüft bei jedem Push die Fachlogik (JavaScript) und die Benachrichtigungslogik (Python).
+# Buchungen der App (nur data.json) lösen keinen Lauf aus.
+on:
+  push:
+    paths-ignore:
+      - data.json
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Syntax der App
+        run: node --check app.js && node --check logik.js
+
+      - name: Fachlogik (JavaScript)
+        run: node --test
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Benachrichtigung (Python)
+        run: python -m unittest discover -s test -p "test_*.py" -v
