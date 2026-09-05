@@ -889,26 +889,6 @@
       ],
       "status": "genehmigt",
       "erstelltVon": "leitung"
-    },
-    {
-      "id": "bmtowc2dv3orhg",
-      "platzId": "p2",
-      "datum": "2026-09-05",
-      "von": "22:00",
-      "bis": "23:30",
-      "typ": "Spiel",
-      "mannschaft": "1. Mannschaft",
-      "kabinen": [
-        "Heim 1",
-        "Gast 1",
-        "Schiedsrichter"
-      ],
-      "notiz": "Bier mitbringen",
-      "status": "abgelehnt",
-      "grund": "",
-      "erstelltVon": "trainer",
-      "geaendertAm": "2026-09-05T21:32",
-      "konflikt": false
     }
   ],
   "zugang": {
