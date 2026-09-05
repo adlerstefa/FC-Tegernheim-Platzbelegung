@@ -1,0 +1,42 @@
+name: Benachrichtigungen
+
+# Verschickt E-Mails, wenn sich die Platzbelegung (data.json) ändert.
+# Postfach und Kontaktschlüssel werden über die App unter „QR & Zugang“ als Secrets hinterlegt.
+on:
+  push:
+    paths:
+      - data.json
+  workflow_dispatch:   # „Test-Mail senden“ in der App
+
+permissions:
+  contents: read
+
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten
+        run: pip install --quiet cryptography
+
+      - name: E-Mails verschicken
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_VON: ${{ secrets.MAIL_VON }}
+          KONTAKT_SCHLUESSEL: ${{ secrets.KONTAKT_SCHLUESSEL }}
+          EREIGNIS: ${{ github.event_name }}
+          VORHER: ${{ github.event.before }}
+          NACHHER: ${{ github.sha }}
+          COMMIT_TEXT: ${{ github.event.head_commit.message }}
+          REPO: ${{ github.repository }}
+        run: python .github/scripts/benachrichtigung.py

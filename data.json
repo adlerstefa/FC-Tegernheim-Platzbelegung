@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "config": {
+    "vereinsname": "FC Tegernheim",
+    "plaetze": [
+      {
+        "id": "p1",
+        "name": "Platz 1"
+      },
+      {
+        "id": "p2",
+        "name": "Platz 2"
+      },
+      {
+        "id": "p3",
+        "name": "Platz Am Damm"
+      },
+      {
+        "id": "p4",
+        "name": "Kleinfeld"
+      }
+    ],
+    "kabinen": [
+      "Heim 1",
+      "Heim 2",
+      "Gast 1",
+      "Gast 2"
+    ],
+    "mannschaften": [
+      "1. Mannschaft",
+      "2. Mannschaft",
+      "A-Jugend (U 19)",
+      "B-Jugend (U 17)",
+      "Alte Liga",
+      "Gast / Fremdvergabe"
+    ]
+  },
+  "buchungen": [
+    {
+      "id": "bmrjjvaq4igiz1",
+      "platzId": "p1",
+      "datum": "2026-07-13",
+      "von": "18:00",
+      "bis": "19:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrjlkrxywvufp",
+      "platzId": "p1",
+      "datum": "2026-07-15",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk6e2vy8zqs3",
+      "platzId": "p1",
+      "datum": "2026-07-24",
+      "von": "17:00",
+      "bis": "20:30",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "ASV Burglengenfeld"
+    },
+    {
+      "id": "bmrk6hoqxaplja",
+      "platzId": "p1",
+      "datum": "2026-08-14",
+      "von": "17:00",
+      "bis": "20:30",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "FC Sturm Hauzenberg"
+    },
+    {
+      "id": "bmrk6g0laq7ksj",
+      "platzId": "p1",
+      "datum": "2026-08-05",
+      "von": "17:00",
+      "bis": "20:30",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "TSV Kareth-Lappersdorf"
+    },
+    {
+      "id": "bmrk6kqe1qccph",
+      "platzId": "p1",
+      "datum": "2026-08-23",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SpVgg Lam"
+    },
+    {
+      "id": "bmrk6noq7mz4bi",
+      "platzId": "p1",
+      "datum": "2026-09-19",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "DJK Vornbach"
+    },
+    {
+      "id": "bmrk6oype05v8w",
+      "platzId": "p1",
+      "datum": "2026-10-03",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "1. FC Bad Kötzting"
+    },
+    {
+      "id": "bmrk6qcldflu0f",
+      "platzId": "p1",
+      "datum": "2026-10-24",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "TSV Seebach"
+    },
+    {
+      "id": "bmrk6x668ebote",
+      "platzId": "p1",
+      "datum": "2026-10-31",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "TSV Bad Abbach"
+    },
+    {
+      "id": "bmrk6yjeqcd6d0",
+      "platzId": "p1",
+      "datum": "2026-11-14",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "TSV 1883 Bogen"
+    },
+    {
+      "id": "bmrk700x4jr0iq",
+      "platzId": "p1",
+      "datum": "2026-11-28",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "1. FC 1911 Passau"
+    },
+    {
+      "id": "bmrk71btq1sfyz",
+      "platzId": "p1",
+      "datum": "2027-03-13",
+      "von": "12:30",
+      "bis": "16:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SV Wenzenbach"
+    },
+    {
+      "id": "bmrk74p3v7tcmr",
+      "platzId": "p1",
+      "datum": "2027-04-10",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SV Türk Gücü Straubing"
+    },
+    {
+      "id": "bmrk760yw2hi76",
+      "platzId": "p1",
+      "datum": "2027-04-24",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SV Schwandorf-Ettmannsdorf"
+    },
+    {
+      "id": "bmrk777ptauru3",
+      "platzId": "p1",
+      "datum": "2027-05-08",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SV Grainet"
+    },
+    {
+      "id": "bmrk787zlr9wq5",
+      "platzId": "p1",
+      "datum": "2027-05-15",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "FC Dingolfing"
+    },
+    {
+      "id": "bmrk7h89ej89kt",
+      "platzId": "p1",
+      "datum": "2026-08-30",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SV Wenzenbach II"
+    },
+    {
+      "id": "bmrk7c0fl27rbg",
+      "platzId": "p1",
+      "datum": "2026-07-19",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SG Schwabelweis/Nord"
+    },
+    {
+      "id": "bmrk7e0pcyulb3",
+      "platzId": "p1",
+      "datum": "2026-08-02",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SV Fortuna Regensburg II"
+    },
+    {
+      "id": "bmrk7fy60oda7y",
+      "platzId": "p1",
+      "datum": "2026-08-16",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "ATSV Pirkensee-Ponholz"
+    },
+    {
+      "id": "bmrk7j3fwl8iec",
+      "platzId": "p1",
+      "datum": "2026-09-13",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "Regensburger Turnerschaft"
+    },
+    {
+      "id": "bmrk7lqc7b28og",
+      "platzId": "p1",
+      "datum": "2026-09-27",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "TSV Bernhardswald"
+    },
+    {
+      "id": "bmrk7mvg4bcw0r",
+      "platzId": "p1",
+      "datum": "2026-10-04",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SG Walhalla Regensburg"
+    },
+    {
+      "id": "bmrk7o2waoz799",
+      "platzId": "p1",
+      "datum": "2026-10-25",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SV Zeitlarn"
+    },
+    {
+      "id": "bmrk72zfgufoc2",
+      "platzId": "p1",
+      "datum": "2027-03-27",
+      "von": "17:00",
+      "bis": "19:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "SC Luhe-Wildenau"
+    },
+    {
+      "id": "bmrk7u0jhqukx9",
+      "platzId": "p1",
+      "datum": "2027-03-27",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "VfR Regensburg"
+    },
+    {
+      "id": "bmrk7w65jezqii",
+      "platzId": "p1",
+      "datum": "2027-04-11",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SV Obertraubling II"
+    },
+    {
+      "id": "bmrk7xmyzi2myp",
+      "platzId": "p1",
+      "datum": "2027-04-25",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SpVgg Stadtamhof Rgbg"
+    },
+    {
+      "id": "bmrk7zghwgzeft",
+      "platzId": "p1",
+      "datum": "2027-05-05",
+      "von": "17:30",
+      "bis": "19:30",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SC Lorenzen"
+    },
+    {
+      "id": "bmrk80pvyvzrc6",
+      "platzId": "p1",
+      "datum": "2027-05-23",
+      "von": "14:00",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": "SC Regensburg II"
+    },
+    {
+      "id": "bmrk8ns8gqol4o",
+      "platzId": "p1",
+      "datum": "2026-07-20",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8p1cqc6zr1",
+      "platzId": "p1",
+      "datum": "2026-07-22",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8ql6cuua6d",
+      "platzId": "p1",
+      "datum": "2026-07-27",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8rgp26ps37",
+      "platzId": "p1",
+      "datum": "2026-07-29",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8so8q3k5l3",
+      "platzId": "p1",
+      "datum": "2026-08-03",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8tu7wg762c",
+      "platzId": "p1",
+      "datum": "2026-08-06",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8ulrzkpjsj",
+      "platzId": "p1",
+      "datum": "2026-08-10",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8vif75sl34",
+      "platzId": "p1",
+      "datum": "2026-08-12",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8wtx3xffau",
+      "platzId": "p1",
+      "datum": "2026-08-17",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8xl0bph7yi",
+      "platzId": "p1",
+      "datum": "2026-08-18",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8z08sjkyup",
+      "platzId": "p1",
+      "datum": "2026-08-20",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk8zz3rpg9rc",
+      "platzId": "p1",
+      "datum": "2026-08-24",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk90i97adi41",
+      "platzId": "p1",
+      "datum": "2026-08-27",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrkjruio9ugz1",
+      "platzId": "p1",
+      "datum": "2026-07-16",
+      "von": "17:00",
+      "bis": "19:00",
+      "typ": "Training",
+      "mannschaft": "B-Jugend (U 17)",
+      "kabine": "Gast 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrkk1s0bt8ju0",
+      "platzId": "p1",
+      "datum": "2026-07-25",
+      "von": "08:00",
+      "bis": "12:30",
+      "typ": "Spiel",
+      "mannschaft": "Gast / Fremdvergabe",
+      "kabine": "",
+      "notiz": "Elferturnier (Fremdvergabe)"
+    },
+    {
+      "id": "bmtiae2y4yvfjq",
+      "platzId": "p2",
+      "datum": "2026-09-01",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmtiaf9yeu3q5g",
+      "platzId": "p2",
+      "datum": "2026-09-03",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmrk6lyjhxzwyq",
+      "platzId": "p1",
+      "datum": "2026-09-05",
+      "von": "13:30",
+      "bis": "17:00",
+      "typ": "Spiel",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": "FC Amberg"
+    },
+    {
+      "id": "bmtibhp0xlz6a4",
+      "platzId": "p2",
+      "datum": "2026-09-08",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmtibiulafpw88",
+      "platzId": "p2",
+      "datum": "2026-09-10",
+      "von": "18:30",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabine": "Heim 1",
+      "notiz": ""
+    },
+    {
+      "id": "bmtibl6d376jzw",
+      "platzId": "p2",
+      "datum": "2026-09-18",
+      "von": "18:00",
+      "bis": "20:00",
+      "typ": "Spiel",
+      "mannschaft": "A-Jugend (U 19)",
+      "kabine": "Gast 2",
+      "notiz": "SV 08 Auerbach"
+    },
+    {
+      "id": "bmtlcggrpoyu4a",
+      "platzId": "p2",
+      "datum": "2026-09-08",
+      "von": "17:30",
+      "bis": "19:00",
+      "typ": "Training",
+      "mannschaft": "B-Jugend (U 17)",
+      "kabine": "Gast 2",
+      "notiz": ""
+    },
+    {
+      "id": "bmtlch9sepgplq",
+      "platzId": "p2",
+      "datum": "2026-09-08",
+      "von": "19:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": ""
+    },
+    {
+      "id": "bmtlhwabw8px1x",
+      "platzId": "p4",
+      "datum": "2026-09-09",
+      "von": "19:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "Alte Liga",
+      "kabine": "Gast 2",
+      "notiz": ""
+    },
+    {
+      "id": "bmtlhxshkwcnan",
+      "platzId": "p2",
+      "datum": "2026-09-03",
+      "von": "19:00",
+      "bis": "20:30",
+      "typ": "Training",
+      "mannschaft": "2. Mannschaft",
+      "kabine": "Heim 2",
+      "notiz": ""
+    },
+    {
+      "id": "bmtibachh1z2h1",
+      "platzId": "p1",
+      "datum": "2026-09-04",
+      "von": "18:00",
+      "bis": "20:30",
+      "typ": "Spiel",
+      "mannschaft": "A-Jugend (U 19)",
+      "kabine": "Gast 2",
+      "notiz": "FC Weiden-Ost"
+    }
+  ],
+  "zugang": {
+    "salz": "nl2LLL1m5C6f7w4AV6R8cw==",
+    "iv": "wCM1wlEvymm2kfeT",
+    "blob": "TSyQ8dhyNz4coym6cw8Iy1hO4u2fpvHKl0Mj+H3L2suoHfWuC9ZCZQxUt5E0nHzMmUPniqVxgXwaPHt0XESvH/e+M8Jnr4h+tTI27+zJB4cT3Ss16f/SETTZBMPS3ApCfyY3YneeIep8ogzMIg==",
+    "iterationen": 310000
+  }
+}
