@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "config": {
     "vereinsname": "FC Tegernheim",
     "plaetze": [
@@ -24,7 +24,8 @@
       "Heim 1",
       "Heim 2",
       "Gast 1",
-      "Gast 2"
+      "Gast 2",
+      "Schiedsrichter"
     ],
     "mannschaften": [
       "1. Mannschaft",
@@ -44,8 +45,12 @@
       "bis": "19:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrjlkrxywvufp",
@@ -55,8 +60,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6e2vy8zqs3",
@@ -66,8 +75,12 @@
       "bis": "20:30",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "ASV Burglengenfeld"
+      "notiz": "ASV Burglengenfeld",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6hoqxaplja",
@@ -77,8 +90,12 @@
       "bis": "20:30",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "FC Sturm Hauzenberg"
+      "notiz": "FC Sturm Hauzenberg",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6g0laq7ksj",
@@ -88,8 +105,12 @@
       "bis": "20:30",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "TSV Kareth-Lappersdorf"
+      "notiz": "TSV Kareth-Lappersdorf",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6kqe1qccph",
@@ -99,8 +120,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SpVgg Lam"
+      "notiz": "SpVgg Lam",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6noq7mz4bi",
@@ -110,8 +135,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "DJK Vornbach"
+      "notiz": "DJK Vornbach",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6oype05v8w",
@@ -121,8 +150,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "1. FC Bad Kötzting"
+      "notiz": "1. FC Bad Kötzting",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6qcldflu0f",
@@ -132,8 +165,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "TSV Seebach"
+      "notiz": "TSV Seebach",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6x668ebote",
@@ -143,8 +180,12 @@
       "bis": "16:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "TSV Bad Abbach"
+      "notiz": "TSV Bad Abbach",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6yjeqcd6d0",
@@ -154,8 +195,12 @@
       "bis": "16:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "TSV 1883 Bogen"
+      "notiz": "TSV 1883 Bogen",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk700x4jr0iq",
@@ -165,8 +210,12 @@
       "bis": "16:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "1. FC 1911 Passau"
+      "notiz": "1. FC 1911 Passau",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk71btq1sfyz",
@@ -176,8 +225,12 @@
       "bis": "16:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SV Wenzenbach"
+      "notiz": "SV Wenzenbach",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk74p3v7tcmr",
@@ -187,8 +240,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SV Türk Gücü Straubing"
+      "notiz": "SV Türk Gücü Straubing",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk760yw2hi76",
@@ -198,8 +255,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SV Schwandorf-Ettmannsdorf"
+      "notiz": "SV Schwandorf-Ettmannsdorf",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk777ptauru3",
@@ -209,8 +270,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SV Grainet"
+      "notiz": "SV Grainet",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk787zlr9wq5",
@@ -220,8 +285,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "FC Dingolfing"
+      "notiz": "FC Dingolfing",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7h89ej89kt",
@@ -231,8 +300,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SV Wenzenbach II"
+      "notiz": "SV Wenzenbach II",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7c0fl27rbg",
@@ -242,8 +315,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SG Schwabelweis/Nord"
+      "notiz": "SG Schwabelweis/Nord",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7e0pcyulb3",
@@ -253,8 +330,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SV Fortuna Regensburg II"
+      "notiz": "SV Fortuna Regensburg II",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7fy60oda7y",
@@ -264,8 +345,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "ATSV Pirkensee-Ponholz"
+      "notiz": "ATSV Pirkensee-Ponholz",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7j3fwl8iec",
@@ -275,8 +360,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "Regensburger Turnerschaft"
+      "notiz": "Regensburger Turnerschaft",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7lqc7b28og",
@@ -286,8 +375,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "TSV Bernhardswald"
+      "notiz": "TSV Bernhardswald",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7mvg4bcw0r",
@@ -297,8 +390,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SG Walhalla Regensburg"
+      "notiz": "SG Walhalla Regensburg",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7o2waoz799",
@@ -308,8 +405,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SV Zeitlarn"
+      "notiz": "SV Zeitlarn",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk72zfgufoc2",
@@ -319,8 +420,12 @@
       "bis": "19:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "SC Luhe-Wildenau"
+      "notiz": "SC Luhe-Wildenau",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7u0jhqukx9",
@@ -330,8 +435,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "VfR Regensburg"
+      "notiz": "VfR Regensburg",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7w65jezqii",
@@ -341,8 +450,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SV Obertraubling II"
+      "notiz": "SV Obertraubling II",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7xmyzi2myp",
@@ -352,8 +465,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SpVgg Stadtamhof Rgbg"
+      "notiz": "SpVgg Stadtamhof Rgbg",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk7zghwgzeft",
@@ -363,8 +480,12 @@
       "bis": "19:30",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SC Lorenzen"
+      "notiz": "SC Lorenzen",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk80pvyvzrc6",
@@ -374,8 +495,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": "SC Regensburg II"
+      "notiz": "SC Regensburg II",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8ns8gqol4o",
@@ -385,8 +510,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8p1cqc6zr1",
@@ -396,8 +525,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8ql6cuua6d",
@@ -407,8 +540,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8rgp26ps37",
@@ -418,8 +555,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8so8q3k5l3",
@@ -429,8 +570,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8tu7wg762c",
@@ -440,8 +585,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8ulrzkpjsj",
@@ -451,8 +600,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8vif75sl34",
@@ -462,8 +615,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8wtx3xffau",
@@ -473,8 +630,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8xl0bph7yi",
@@ -484,8 +645,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8z08sjkyup",
@@ -495,8 +660,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk8zz3rpg9rc",
@@ -506,8 +675,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk90i97adi41",
@@ -517,8 +690,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrkjruio9ugz1",
@@ -528,8 +705,12 @@
       "bis": "19:00",
       "typ": "Training",
       "mannschaft": "B-Jugend (U 17)",
-      "kabine": "Gast 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Gast 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrkk1s0bt8ju0",
@@ -539,8 +720,10 @@
       "bis": "12:30",
       "typ": "Spiel",
       "mannschaft": "Gast / Fremdvergabe",
-      "kabine": "",
-      "notiz": "Elferturnier (Fremdvergabe)"
+      "notiz": "Elferturnier (Fremdvergabe)",
+      "kabinen": [],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtiae2y4yvfjq",
@@ -550,8 +733,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtiaf9yeu3q5g",
@@ -561,8 +748,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmrk6lyjhxzwyq",
@@ -572,8 +763,12 @@
       "bis": "17:00",
       "typ": "Spiel",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": "FC Amberg"
+      "notiz": "FC Amberg",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtibhp0xlz6a4",
@@ -583,8 +778,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtibiulafpw88",
@@ -594,8 +793,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "1. Mannschaft",
-      "kabine": "Heim 1",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 1"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtibl6d376jzw",
@@ -605,8 +808,12 @@
       "bis": "20:00",
       "typ": "Spiel",
       "mannschaft": "A-Jugend (U 19)",
-      "kabine": "Gast 2",
-      "notiz": "SV 08 Auerbach"
+      "notiz": "SV 08 Auerbach",
+      "kabinen": [
+        "Gast 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtlcggrpoyu4a",
@@ -616,8 +823,12 @@
       "bis": "19:00",
       "typ": "Training",
       "mannschaft": "B-Jugend (U 17)",
-      "kabine": "Gast 2",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Gast 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtlch9sepgplq",
@@ -627,8 +838,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtlhwabw8px1x",
@@ -638,8 +853,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "Alte Liga",
-      "kabine": "Gast 2",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Gast 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtlhxshkwcnan",
@@ -649,8 +868,12 @@
       "bis": "20:30",
       "typ": "Training",
       "mannschaft": "2. Mannschaft",
-      "kabine": "Heim 2",
-      "notiz": ""
+      "notiz": "",
+      "kabinen": [
+        "Heim 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     },
     {
       "id": "bmtibachh1z2h1",
@@ -660,14 +883,26 @@
       "bis": "20:30",
       "typ": "Spiel",
       "mannschaft": "A-Jugend (U 19)",
-      "kabine": "Gast 2",
-      "notiz": "FC Weiden-Ost"
+      "notiz": "FC Weiden-Ost",
+      "kabinen": [
+        "Gast 2"
+      ],
+      "status": "genehmigt",
+      "erstelltVon": "leitung"
     }
   ],
   "zugang": {
-    "salz": "nl2LLL1m5C6f7w4AV6R8cw==",
-    "iv": "wCM1wlEvymm2kfeT",
-    "blob": "TSyQ8dhyNz4coym6cw8Iy1hO4u2fpvHKl0Mj+H3L2suoHfWuC9ZCZQxUt5E0nHzMmUPniqVxgXwaPHt0XESvH/e+M8Jnr4h+tTI27+zJB4cT3Ss16f/SETTZBMPS3ApCfyY3YneeIep8ogzMIg==",
+    "salz": "XTaCcMxlpO9TUUBcb5abbw==",
+    "iv": "mQ1iHKSW1t50f5X9",
+    "blob": "V7JfdXBbrD/ArZVZQZtWhBWLeX+CvTBPTo69tZmmWJ3AH+nMGmx4V4DeRaGVDjzlFHqmYX+gYadCFbeQGu6WqTUdTwHN/ioQeNimyGBxDZIoBiXz956luc1TcYeLMpouP0Y7nbPE3HItrxS9IbimaYqSuIFUHHkQTA==",
+    "iterationen": 310000
+  },
+  "serien": [],
+  "sperren": [],
+  "zugangLeitung": {
+    "salz": "5mYpjZ8zAhn3utry/J8Cpg==",
+    "iv": "RncGvjli4h4s/UOf",
+    "blob": "FpbUXQqJs44vqyKLc1YvRk+/JAScWGANKzxnucnHBJBQqlrXdxnwPW1flDsdnpHyDEJog+FQLVz4IPKvFTps2prflO8yNb1kEQCVgwPisbZh91e/enHrIEmOloAzZJiaDLyICx2giphcwRUo6F6eQQeXqEopUbQ2oaSU6LfsaUD4FJpsee9mbKYObzKmGzuwQ3nWEiCFxCzfpJ766fxO5RZtx9O0/s6XApI4AFUWx7Z+UNuM9rmHNVHnSZGBFH1JFxY0xB8GV9eLXlUAjyJDbHGAN6xyrU0/b8+Gex7/9geBDGxPJYhEyPJ0MrmL/Ci9cnlPJRN20uPyif2lZmphmTBD8n7q3g+Fll/whVB5gd+gi/xcm1VJ6a6enA==",
     "iterationen": 310000
   }
 }
