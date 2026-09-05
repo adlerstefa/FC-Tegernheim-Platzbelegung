@@ -909,6 +909,22 @@
       "erstelltVon": "trainer",
       "geaendertAm": "2026-09-05T21:30",
       "konflikt": false
+    },
+    {
+      "id": "bmtowecfgtw7qt",
+      "platzId": "p2",
+      "datum": "2026-09-05",
+      "von": "21:00",
+      "bis": "22:30",
+      "typ": "Training",
+      "mannschaft": "1. Mannschaft",
+      "kabinen": [],
+      "notiz": "",
+      "status": "angefragt",
+      "grund": "",
+      "erstelltVon": "trainer",
+      "geaendertAm": "2026-09-05T21:31",
+      "konflikt": true
     }
   ],
   "zugang": {
